@@ -9,7 +9,6 @@ import sys
 lettres = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q","R", "S", "T", "U", "V", "W", "X","Y", "Z"]
 list_themes = ["Aliment", "Animal", "Arbre", "Boisson", "Couleur", "Dans la pièce", "Fleur", "Fruit", "Marque", "Meuble", "Monnaie", "Pays", "Personnage", "Personnalité", "Prénom féminin", "Prénom masculin", "Ville"]
 theme_choisi ="THEMES"
-# temps_choisi = self.spn_chrono.value()
 
 class ma_fenetre(QMainWindow):
     def __init__(self):
@@ -21,8 +20,7 @@ class ma_fenetre(QMainWindow):
 
         self.bar_du_bas = self.statusBar() # Juste pour mon copyright ;))
         self.bar_du_bas.setStyleSheet("background: #9d00d8; font-size: 12px")
-        self.bar_du_bas.showMessage("Fait par l'aimable PINGOU")
-        self.bar_du_bas.setToolTip("Et oui Marguerite, je suis AIMABLE ;)")
+        self.bar_du_bas.showMessage("Fait par PINGOU")
 
         self.central = QWidget(self) # Pour gérer ma zone de travail
         self.central.setStyleSheet("background: #dbffff")
@@ -102,8 +100,6 @@ class ma_fenetre(QMainWindow):
             self.affiche_timer.start(1000)
         else:
             self.lb_temps.setText("")
-        # else:
-        #     self.timer.stop()
 
     def partie_suivante(self): # Je change juste le nom des boutons, quand je changeais le signal ça faisait des trucs bizard ;))) car il gardait aussi le signal du même bouton comme si 2 boutons étaient superposés
         global theme_choisi
